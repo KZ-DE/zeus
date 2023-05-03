@@ -1,0 +1,180 @@
+.container {
+  display: flexbox;
+  width: 100%;
+  height: 500vh;
+  min-height: 200px;
+  min-height: 100px;
+  background-image: url("../image/bg.jpeg");
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-color: rgb(51, 52, 117);
+}
+
+.wraper-nav {
+  display: flex;
+}
+
+.navbar {
+  width: 100%;
+  height: 10vh;
+  background-color: rgb(26, 26, 64);
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  position: fixed;
+}
+
+.logo {
+  padding: 1vh;
+  padding-left: 4vh;
+}
+
+.logo img {
+  height: 8vh;
+  border-radius: 50%;
+}
+
+.judul {
+  display: flex;
+  width: 45%;
+  justify-content: start;
+  align-items: center;
+  transition: all ease 1s;
+}
+
+.judul:hover {
+  color: yellow;
+  transition: all ease-out 2s;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  width: 40%;
+  margin-right: 3%;
+}
+
+.navbar li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar a {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5vw;
+  transition: all ease-in-out 1s;
+}
+
+/* efek */
+.navbar a:hover {
+  color: #fa58b6;
+  transition: all 1s;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  background-color: #fa58b6;
+  width: 0;
+  height: 1vh;
+  top: 4vh;
+  transition: 1s;
+  border-radius: 1rem;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+/* -- */
+
+/* main */
+.wraper-main {
+  display: flex;
+  color: white;
+  width: 100%;
+  height: 120vh;
+  justify-content: center;
+  transition: all ease-in 0.4s;
+}
+
+.main {
+  margin-top: 10vh;
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition-delay: 0.5s;
+}
+
+.conten {
+  cursor: default;
+  text-shadow: 1px 5px 10px black;
+}
+
+.main:hover {
+  transition: all ease-out 1s;
+  opacity: 1;
+  transition-delay: 0.1s;
+}
+
+/* --- */
+
+/* Phone */
+@media only screen and (max-width: 480px) {
+  .navbar {
+    height: 8vh;
+    align-items: center;
+  }
+  .navbar a {
+    font-size: 2vw;
+    transition: 1s;
+  }
+
+  .navbar a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1vh;
+    top: 2.5vh;
+    transition: 1s;
+    border-radius: 1rem;
+  }
+
+  .navbar a:hover::after {
+    width: 100%;
+  }
+
+  .logo {
+    transition: 1s;
+    padding: 0;
+    padding-left: 3vh;
+  }
+
+  .logo img {
+    transition: 1s;
+    height: 6vh;
+  }
+
+  /* main */
+  .wraper-main {
+    margin-top: 8vh;
+    height: 15.7rem;
+    transition: all ease-in-out 0.5s;
+  }
+  /*  */
+}
+
+/* test */
+
+/*  */
